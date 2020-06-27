@@ -1,0 +1,106 @@
+/*******************************
+CUSTOM CLASSES
+*******************************/
+.stephen {
+  &__container {
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  &__axis-font {
+    font-family: 'stephen__axis';
+  }
+
+  &__hide-on-large-and-down {
+    @include brkpt (mobile) {
+      display: none;
+    }
+
+    @include brkpt (tab) {
+      display: none;
+    }
+
+    @include brkpt (desktop) {
+      display: none;
+    }
+
+    @include brkpt (largedesktop) {
+      display: block;
+    }
+  }
+
+  &__icon-size {
+    width: 15px;
+  }
+
+  // Margin classes
+  &__mb-1 {
+    margin-bottom: 1vh;
+  }
+
+  &__mb-2 {
+    margin-bottom: 2vh;
+  }
+
+  &__mt-1 {
+    margin-top: 1vh;
+  }
+
+  &__mt-2 {
+    margin-top: 2vh;
+  }
+
+  &__mx-1 {
+    margin: 0 1vw;
+  }
+
+  &__mx-2 {
+    margin-top: 0 2vw;
+  }
+
+  &__my-1 {
+    margin-top: 1vh 0;
+  }
+
+  &__my-2 {
+    margin-top: 2vh 0;
+  }
+
+  // Padding classes
+  &__pb-1 {
+    padding-bottom: 1vh;
+  }
+
+  &__pb-2 {
+    padding-bottom: 2vh;
+  }
+
+  &__pt-1 {
+    padding-top: 1vh;
+  }
+
+  &__pt-2 {
+    padding-top: 2vh;
+  }
+
+  &__px-1 {
+    padding: 0 1vw;
+  }
+
+  &__px-2 {
+    padding: 0 2vw;
+  }
+
+  &__py-1 {
+    padding: 1.5vh 0;
+  }
+
+  &__py-2 {
+    padding: 2vh 0;
+  }
+
+  &__raleway-font {
+    font-family: 'stephen__raleway';
+  }
+}
