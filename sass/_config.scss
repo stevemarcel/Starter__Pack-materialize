@@ -1,6 +1,24 @@
-// $pry__color:;
-// $sec__color:;
-$grey__color: #c4c4c4;
+/*******************************
+CUSTOM FONTS
+*******************************/
+@font-face {
+  font-family: stephen__formata;
+  src: url('../assets/fonts/Formata-Regular.otf');
+}
+
+/*******************************
+MIXINS
+*******************************/
+@mixin transition__ease-in-out {
+  transition: all .5s ease-in-out;
+}
+
+/*******************************
+VARIABLES
+*******************************/
+// $pry__colour:;
+// $sec__colour:;
+$grey__colour: #c4c4c4;
 
 * {
   box-sizing: border-box;
@@ -9,8 +27,12 @@ $grey__color: #c4c4c4;
 }
 
 a {
-  color: $grey__color;
-  text-decoration: none;
+  color: $grey__colour;
+  @include transition__ease-in-out;
+
+  &:hover {
+    color: darken($color: $grey__colour, $amount: 10%);
+  }
 }
 
 body {
@@ -19,11 +41,13 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
+  /* to remove the default teal colour on materialize active*/
+  .active {
+    color: inherit !important;
+    opacity: .9;
+  }
+
   main {
     flex: 1 0 auto;
   }
-}
-
-@mixin transition__ease-in-out {
-  transition: all .5s ease-in-out;
 }

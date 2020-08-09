@@ -8,10 +8,6 @@ CUSTOM CLASSES
     overflow: hidden;
   }
 
-  &__axis-font {
-    font-family: 'stephen__axis';
-  }
-
   &__hide-on-large-and-down {
     @include brkpt (mobile) {
       display: none;
@@ -100,7 +96,14 @@ CUSTOM CLASSES
     padding: 2vh 0;
   }
 
-  &__raleway-font {
-    font-family: 'stephen__raleway';
+  &__v-center {
+    width: inherit;
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+  }
+
+  &__formata-font {
+    font-family: 'stephen__formata';
   }
 }
